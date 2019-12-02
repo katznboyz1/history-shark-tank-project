@@ -1,0 +1,28 @@
+{
+    "keymaps":{
+        "48":"CLSTGGL",
+        "49":"what-is-it",
+        "50":"significance",
+        "51":"target-consumers",
+        "52":"impact",
+        "53":"blank"
+    },
+    "pages":{
+        "what-is-it":{
+            "title":"What is the Model T?",
+            "content":"The Model T is an a durable, affordable, and easy to produce car that I invented. It has a top speed of 40-45 MPH, and it has around 20 horsepower. This is about the power of two average horses, contained within one engine that is only a fraction the size of a horse."
+        },
+        "significance":{
+            "title":"What is the significance of the Model T?",
+            "content":"As mentioned before, this single car has the power of two horses, and can travel faster than most local commuter services, and can travel at about the same speed as a running horse. It can travel with a maximum 21 miles per gallon, and with a 10-gallon tank, this means you can travel up to 210 miles on just one tank. At a cheap price at only 825 USD, compared to Chevrolet's 1345 USD car, and Studebaker’s 2350 USD car, transportation is now affordable to the common public."
+        },
+        "target-consumers":{
+            "title":"Who are the target consumers?",
+            "content":"The target consumers for this car, are the general American public, and not just the top wealthy class. With its low price, it is now affordable for most households."
+        },
+        "impact":{
+            "title":"What is the impact?",
+            "content":"Assembly lines will be used meaning that less human labor is involved. This means that we can give everybody generous 5$ wages.<br>Due to the amount of people needed, more jobs will be created, and this will thus expand the middle class by giving people more high paying jobs.<br>Since the company will make more high paying jobs, more of America will be better off and able to afford things, thus improving the economic situation of America. The expansion of the middle class will make it so that more people will be lifted from poverty and will now be well economically situated."
+        }
+    }
+}

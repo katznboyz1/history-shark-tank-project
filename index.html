@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <title>Model T Shark Tank Presentation</title>
+        <meta charset = 'utf-8'/>
+        <style>
+            @font-face{font-family:__local__robotolt__;src:url('./roboto-light.ttf');}
+            body{background-color:black;}
+            #videoBackground{position:fixed;top:-25vh;left:-25vw;width:200vw;height:200vh;opacity:0.5;}
+            #overlay{width:60vw;height:60vh;position:absolute;top:20vh;left:20vw;background-color:rgba(0, 0, 0, 0.65);overflow:scroll;border:10px solid rgba(0, 0, 0, 0.75);overflow-x:hidden;opacity:0;}
+            #overlayTitle{font-family:__local__robotolt__;color:white;font-size:45px;margin:0px;word-wrap:break-word;}
+            #overlayContent{font-family:__local__robotolt__;color:white;font-size:30px;margin:0px;margin-top:45px;word-wrap:break-word;}
+        </style>
+    </head>
+    <body onkeydown = 'handleKeyDown(event.keyCode);'>
+        <video autoplay muted loop id = 'videoBackground'>
+            <source src = './model-t-driving-footage-2.webm'>
+            <source src = './model-t-driving-footage-1.webm'>
+            <source src = './model-t-assembly-line-2.mp4'>
+        </video>
+        <div id = 'overlay'>
+            <p id = 'overlayTitle'></p>
+            <p id = 'overlayContent'></p>
+        </div>
+        <script>
+            var clearScreenToggleStatus = false;
+            function handleKeyDown(keyCode) {
+                keyMap = window.PAGES['keymaps'][String(keyCode)];
+                if (keyMap !== undefined) {
+                    pageInfo = window.PAGES['pages'][String(keyMap)];
+                    if (keyMap != 'CLSTGGL') {
+                        clearScreenToggleStatus = false;
+                        document.getElementById('overlayTitle').innerHTML = pageInfo['title'];
+                        document.getElementById('overlayContent').innerHTML = pageInfo['content'];
+                    } else {
+                        clearScreenToggleStatus = !clearScreenToggleStatus;
+                    }
+                    if (clearScreenToggleStatus) {
+                        document.getElementById('overlay').style.opacity = '0';
+                    } else {
+                        document.getElementById('overlay').style.opacity = '1';
+                    }
+                }
+            }
+            fetch('./pages.json', {method:'GET'}).then(function(response){return response.json();}).then(function(pages) {
+                window.PAGES = pages;
+            })
+        </script>
+    </body>
+</html>
+<!--written by harrison/katznboyz-->
